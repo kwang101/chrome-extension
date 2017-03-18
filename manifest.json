@@ -1,0 +1,16 @@
+{
+  "manifest_version": 2,
+
+  "name": "Chrome Extension for Movies",
+  "description": "This extension gets data about movies and displays the current movies playing.",
+  "version": "1.0",
+
+  "browser_action": {
+    "default_icon": "fficon.png",
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "activeTab",
+    "https://ajax.googleapis.com/"
+  ]
+}
