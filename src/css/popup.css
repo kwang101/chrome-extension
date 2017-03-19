@@ -1,0 +1,58 @@
+#search_in {
+}
+#results {
+	width: 500px;
+}
+body {
+	text-align: center;
+}
+.holder {
+	position: relative;
+	cursor: pointer;
+}
+
+.holder_c {
+	background-color: #FFE700;
+}
+
+.img {
+	float: left;
+	height: 50px;
+	width: 50px;
+}
+
+.img_src {
+	height: 100%;
+}
+
+.name {
+	float: left;
+	width: 200px;
+}
+
+.star_text {
+	margin-top: 15px;
+}
+
+.star {
+	/*float: right;*/
+	position: absolute;
+	right: 0px;
+	font-size:20px;
+	width: 50px;
+	height: 50px;
+	background-image: url('../images/star.png');
+	background-size:50px 50px;
+	text-align: center;
+	vertical-align: middle;
+	display: none;
+}
+
+.seperator {
+	clear: left;
+	height: 2px;
+}
+
+.back {
+	display: none;
+}
