@@ -1,7 +1,7 @@
 #search_in {
 }
 #results {
-	width: 500px;
+	width: 300px;
 }
 body {
 	text-align: center;
@@ -41,7 +41,7 @@ body {
 	font-size:20px;
 	width: 50px;
 	height: 50px;
-	background-image: url('../images/star.png');
+	background-image: url('star.png');
 	background-size:50px 50px;
 	text-align: center;
 	vertical-align: middle;

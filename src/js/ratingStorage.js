@@ -33,4 +33,3 @@ RatingStorage.load = function(id, f) {
 	else
 		f(null);	
 }
-

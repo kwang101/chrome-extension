@@ -23,7 +23,7 @@ function removeEvent( obj, type, fn )
 
 function ImdbAPI() {
     var self = this;
-    this.input = document.getElementById("serach_in");
+    this.input = document.getElementById("search_in");
     this.results = document.getElementById("results");
     addEvent(this.input, "keyup", function() {
         self.search(self.input.value);
@@ -77,7 +77,7 @@ ImdbAPI.prototype.addSuggestion = function(entry, i, str) {
     
     suggestion.createDownload();
     
-    return entry.l.length*12+107;
+    return entry.l.length*12+107;//(name.clientHeight + 1) + "px";
 }
 
 ImdbAPI.prototype.showResults = function(results) {
@@ -99,7 +99,6 @@ ImdbAPI.prototype.showResults = function(results) {
             }
         }
     }
-    //document.body.style.width = (width + 1) + "px";
 }
 
 ImdbAPI.prototype.search = function (str) {
@@ -142,8 +141,7 @@ ImdbAPI.prototype.request = function (str) {
         }
         else if (req.status == 403) {
             var reg = new RegExp(this.last_search,"i");
-            if (!str.match(reg) && str.length > 2) //if not based on last search remove the last character and do it again
-              //for some unknown reason i have to call this function twice so it actually returns something on the second call...bug???
+            if (!str.match(reg) && str.length > 2)
               str.substr(0, str.length-1);
                 self.search(str.substr(0, str.length-1));
         }
