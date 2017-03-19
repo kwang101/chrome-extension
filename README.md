@@ -8,4 +8,6 @@ Most people who enjoy watching films don't have a convenient way to find out the
 
 NOTE: This is my first attemp at chrome extension.
 
-// note to self: Key: ukuzkfkg2rwf5katynr8b5gd
+//Note to self: 
+Key: ukuzkfkg2rwf5katynr8b5gd
+Parse from response body for title, qualityRatings, showtimes

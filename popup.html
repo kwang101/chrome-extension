@@ -1,37 +1,153 @@
 <!doctype html>
-<!--
- This page is shown when the extension button is clicked, because the
- "browser_action" field in manifest.json contains the "default_popup" key with
- value "popup.html".
- -->
 <html>
-  <head>
-    <title>FilmFinder Chrome Extension</title>
-    <style>
-      body {
-        font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
-        font-size: 100%;
-      }
-      #status {
-        /* avoid an excessively wide status text */
-        white-space: pre;
-        text-overflow: ellipsis;
-        overflow: hidden;
-        max-width: 400px;
-      }
-    </style>
-
-    <!--
-      - JavaScript and HTML must be in separate files: see our Content Security
-      - Policy documentation[1] for details and explanation.
-      -
-      - [1]: https://developer.chrome.com/extensions/contentSecurityPolicy
-     -->
-    <script src="popup.js"></script>
-  </head>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>FilmFinder</title>
+        <link rel="stylesheet" type="text/css" href="src/js/jquery-ui/jquery-ui/jquery-ui.min.css">
+        <link rel="stylesheet" type="text/css" href="src/css/style.css">
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700" rel="stylesheet">
+    </head>
   <body>
-    <div id="status"></div>
-    <img id="image-result" hidden>
+    <div id="popup_page">
+    <h1 class='u-text-align-center'>Today's Movies</h1>
+    <div id='footer' class='u-flex-column u-align-center'>
+        <div id="lastUpdate">Last updated: --:--:--</div>
+    </div>
+
+    <div id="card_1" class="c-card u-shadow u-hide">
+      <div class="c-team-info">
+          <div class="c-team-logo"></div>
+          <div class=" c-team-name"></div>
+      </div>
+      <div class="c-match-info">
+          <div class="u-display-flex u-justify-center">
+              <span class="c-team-score"></span>
+          </div>
+          <div class="c-clock">Loading...</div>
+      </div>
+    </div>
+
+    <div id="card_2" class="c-card u-shadow u-hide">
+        <div class="c-team-info">
+            <div class="c-team-logo"></div>
+            <div class=" c-team-name"></div>
+        </div>
+        <div class="c-match-info">
+            <div class="u-display-flex u-justify-center">
+                <span class="c-team-score"></span>
+            </div>
+            <div class="c-clock">Loading...</div>
+        </div>
+    </div>
+
+    <div id="card_3" class="c-card u-shadow u-hide">
+        <div class="c-team-info">
+            <div class="c-team-logo"></div>
+            <div class=" c-team-name"></div>
+        </div>
+        <div class="c-match-info">
+            <div class="u-display-flex u-justify-center">
+                <span class="c-team-score"></span>
+            </div>
+            <div class="c-clock">Loading...</div>
+        </div>
+    </div>
+    <div id="card_4" class="c-card u-shadow u-hide">
+        <div class="c-team-info">
+            <div class="c-team-logo"></div>
+            <div class=" c-team-name"></div>
+        </div>
+        <div class="c-match-info">
+            <div class="u-display-flex u-justify-center">
+                <span class="c-team-score"></span>
+            </div>
+            <div class="c-clock">Loading...</div>
+        </div>
+    </div>
+
+    <div id="card_5" class="c-card u-shadow u-hide">
+        <div class="c-team-info">
+            <div class="c-team-logo"></div>
+            <div class=" c-team-name"></div>
+        </div>
+        <div class="c-match-info">
+            <div class="u-display-flex u-justify-center">
+                <span class="c-team-score"></span>
+            </div>
+            <div class="c-clock">Loading...</div>
+        </div>
+    </div>
+    <div id="card_6" class="c-card u-shadow u-hide">
+        <div class="c-team-info">
+            <div class="c-team-logo"></div>
+            <div class=" c-team-name"></div>
+        </div>
+        <div class="c-match-info">
+            <div class="u-display-flex u-justify-center">
+                <span class="c-team-score"></span>
+            </div>
+            <div class="c-clock">Loading...</div>
+        </div>
+    </div>
+
+    <div id="card_7" class="c-card u-shadow u-hide">
+        <div class="c-team-info">
+            <div class="c-team-logo"></div>
+            <div class=" c-team-name"></div>
+        </div>
+        <div class="c-match-info">
+            <div class="u-display-flex u-justify-center">
+                <span class="c-team-score"></span>
+            </div>
+            <div class="c-clock">Loading...</div>
+        </div>
+    </div>
+    <div id="card_8" class="c-card u-shadow u-hide">
+        <div class="c-team-info">
+            <div class="c-team-logo"></div>
+            <div class=" c-team-name"></div>
+        </div>
+        <div class="c-match-info">
+            <div class="u-display-flex u-justify-center">
+                <span class="c-team-score"></span>
+            </div>
+            <div class="c-clock">Loading...</div>
+        </div>
+    </div>
+
+    <div id="card_9" class="c-card u-shadow u-hide">
+        <div class="c-team-info">
+            <div class="c-team-logo"></div>
+            <div class=" c-team-name"></div>
+        </div>
+        <div class="c-match-info">
+            <div class="u-display-flex u-justify-center">
+                <span class="c-team-score"></span>
+            </div>
+            <div class="c-clock">Loading...</div>
+        </div>
+    </div>
+
+    <div id="card_10" class="c-card u-shadow u-hide">
+        <div class="c-team-info">
+            <div class="c-team-logo"></div>
+            <div class=" c-team-name"></div>
+        </div>
+        <div class="c-match-info">
+            <div class="u-display-flex u-justify-center">
+                <span class="c-team-score"></span>
+            </div>
+            <div class="c-clock">Loading...</div>
+        </div>
+    </div>
+
+    <div class='u-display-flex u-justify-center'>
+    <a href='options.html' id='optionsPage'>Options</a>
+    </div>
+
+    </div>
+  <script src="js/popup.js"></script>
+  <script src="src/js/jquery/jquery.min.js"></script>
+  <script src="src/js/jquery-ui/jquery-ui.min.js"></script>
   </body>
 </html>
-
