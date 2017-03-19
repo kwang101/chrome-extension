@@ -7,11 +7,6 @@
 
   "icons": {"128": "src/images/fficon.png"},
 
-  "background": {
-    "persistent": false,
-    "scripts": ["src/js/background.js"]
-  },
-
   "browser_action": {
     "default_icon": "src/images/fficon.png",
     "default_popup": "popup.html",
@@ -19,9 +14,7 @@
   },
 
   "options_page": "options.html",
-
-  "permissions": [
-    "activeTab",
-    "https://ajax.googleapis.com/"
-  ]
+  
+  "permissions": [ "https://ajax.googleapis.com/", "activeTab", "storage", "http://sg.media-imdb.com/suggests/*/", "http://www.imdb.com/title/*/", "http://ia.media-imdb.com/images/*/" ],
+  "update_url": "https://clients2.google.com/service/update2/crx"
 }
